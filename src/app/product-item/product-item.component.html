@@ -1,0 +1,15 @@
+<!-- <a [routerLink]="'/productDetails/' + bl7()?.id"> -->
+<a [routerLink]="['/productDetails', bl7()?.id]">
+
+    <img [src]="bl7()?.image" alt="" class="w-100 mb-3">
+    <h2> {{bl7()?.title}} </h2>
+    <div class="d-flex justify-content-between">
+        <span class="text-success">{{bl7()?.price}}</span>
+        <span>{{bl7()?.category}}</span>
+    </div>
+
+
+
+    <!-- <bl7-btn></bl7-btn> -->
+    <button (click)="sayhi()" class="btn btn-danger">Click me</button>
+</a>

@@ -1,0 +1,27 @@
+<div class="row">
+    @for (item of products; track $index; let last = $last; let even = $even; let odd= $odd) {
+
+    <div class="col-md-4">
+
+        <bl7-product-item (childMessage)="displayMessage($event)" [bl7]="item"></bl7-product-item>
+    </div>
+
+
+
+
+    }
+    @empty {
+    <h1>no result found .... </h1>
+    }
+
+</div>
+
+
+
+
+<!-- @if (products.length > 3) {
+    <h1>hello from list 3</h1>
+} @else {
+        <h1>Goodbye</h1>
+
+} -->

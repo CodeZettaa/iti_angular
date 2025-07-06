@@ -1,0 +1,15 @@
+<div class="row">
+    @for (item of foods; track $index) {
+    <div class="col-md-4">
+        <img [src]="item.image_url" class="w-100" alt="">
+        <h3>{{item.title}}</h3>
+        <p>{{item.social_rank}}</p>
+    </div>
+    }
+</div>
+
+@if (showLoading) {
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-jelly-box" [fullScreen]="true">
+    <p style="color: white"> Loading... </p>
+</ngx-spinner>
+}
